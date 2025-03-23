@@ -1,0 +1,39 @@
+/* Ustawienie pełnej wysokości dla strony startowej */
+html,
+body,
+header,
+#intro {
+  height: 100%;
+}
+
+/* Ustawienie tła dla sekcji startowej */
+#intro {
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Dodatkowe style niestandardowe */
+hr {
+  border-top: 1px solid #bbb;
+}
+
+.page-footer {
+  background-color: #f8f9fa;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Styl dla wykresu */
+#chart canvas {
+  max-width: 100%;
+  height: 400px;
+}
+
+
+
