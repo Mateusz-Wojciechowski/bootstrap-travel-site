@@ -9,75 +9,7 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   <!-- Custom styles -->
-  <style>
-    .view {
-      height: 100vh;
-      background-image: url('img/bg.jpg');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-    .mask {
-      background-color: rgba(0, 0, 0, 0.6);
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .navbar {
-      background-color: #4285F4 !important;
-    }
-    .primary-color {
-      background-color: #4285F4 !important;
-    }
-    .hr-light {
-      border-top: 3px solid #fff;
-      width: 80px;
-    }
-    .travel-img-container {
-      cursor: pointer;
-      overflow: hidden;
-      position: relative;
-    }
-    .travel-img-container img {
-      transition: transform 0.3s ease;
-    }
-    .travel-img-container:hover img {
-      transform: scale(1.05);
-    }
-    .travel-img-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(33, 150, 243, 0.2);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .travel-img-container:hover .travel-img-overlay {
-      opacity: 1;
-    }
-    .modal-full {
-      max-width: 100%;
-      margin: 0;
-    }
-    .modal-full .modal-content {
-      height: 100vh;
-      border: 0;
-      border-radius: 0;
-    }
-    .modal-image {
-      max-height: 70vh;
-      object-fit: contain;
-    }
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-      padding: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/test.css">
 </head>
 <body>
 
@@ -152,7 +84,7 @@
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip1.jpg" class="img-fluid" alt="Podróż 1" data-bs-toggle="modal" data-bs-target="#travelModal" 
                    data-title="Tatry" data-description="Aktywny wypoczynek w polskich górach. Tatry to najwyższe pasmo górskie w Polsce, oferujące przepiękne widoki, liczne szlaki turystyczne o różnym stopniu trudności oraz bogactwo flory i fauny. W zimie można cieszyć się sportami zimowymi, a w lecie pieszymi wędrówkami. To idealne miejsce dla miłośników aktywnego wypoczynku i przyrody.">
-              <div class="travel-img-overlay"></div>
+              <!-- <div class="travel-img-overlay"></div> -->
             </div>
             <h4 class="my-4 fw-bold">Tatry</h4>
             <p class="text-muted">Aktywny wypoczynek w polskich górach</p>
@@ -429,7 +361,7 @@
     </div>
   </main>
 
-  <!-- Travel Image Modal -->
+  <!-- Travel Image Modal
   <div class="modal fade" id="travelModal" tabindex="-1" aria-labelledby="travelModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
@@ -445,7 +377,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!--Footer-->
   <footer class="text-center text-white mt-4 py-3 primary-color">
@@ -458,6 +390,15 @@
     </div>
   </footer>
 
+  <div class="img-expand">
+    <button class="close-button">&times;</button>
+    <img src="" alt="Powiększone zdjęcie">
+    <div class="image-caption">
+      <div class="image-title"></div>
+      <div class="image-description"></div>
+    </div>
+  </div>
+
   <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Chart.js -->
@@ -466,66 +407,158 @@
   <script>
     // Chart.js initialization
     document.addEventListener('DOMContentLoaded', function() {
-      var ctx = document.getElementById('travelChart').getContext('2d');
-      var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Włochy', 'Hiszpania', 'Grecja', 'Francja', 'Portugalia', 'Chorwacja'],
-          datasets: [{
-            label: 'Popularność kierunków (liczba wycieczek)',
-            data: [253, 214, 187, 165, 142, 136],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.7)',
-              'rgba(54, 162, 235, 0.7)',
-              'rgba(255, 206, 86, 0.7)',
-              'rgba(75, 192, 192, 0.7)',
-              'rgba(153, 102, 255, 0.7)',
-              'rgba(255, 159, 64, 0.7)'
-            ],
-            borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
+  // Chart.js initialization
+  var ctx = document.getElementById('travelChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Włochy', 'Hiszpania', 'Grecja', 'Francja', 'Portugalia', 'Chorwacja'],
+      datasets: [{
+        label: 'Popularność kierunków (liczba wycieczek)',
+        data: [253, 214, 187, 165, 142, 136],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.7)',
+          'rgba(54, 162, 235, 0.7)',
+          'rgba(255, 206, 86, 0.7)',
+          'rgba(75, 192, 192, 0.7)',
+          'rgba(153, 102, 255, 0.7)',
+          'rgba(255, 159, 64, 0.7)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        y: {
+          beginAtZero: true
         }
-      });
+      }
+    }
+  });
+  
+  // Travel modal initialization - oddzielny blok kodu
+//   var travelModal = document.getElementById('travelModal');
+  
+//   // Upewnij się, że Bootstrap jest załadowany
+//   if (typeof bootstrap !== 'undefined') {
+//     // Obsługa zdarzenia pokazywania modala
+//     travelModal.addEventListener('show.bs.modal', function(event) {
+//       var button = event.relatedTarget;
+//       var title = button.getAttribute('data-title');
+//       var description = button.getAttribute('data-description');
+//       var image = button.getAttribute('src');
       
-      // Travel image modal functionality
-      var travelModal = document.getElementById('travelModal');
-      travelModal.addEventListener('show.bs.modal', function (event) {
-        var button = event.relatedTarget;
-        var title = button.getAttribute('data-title');
-        var description = button.getAttribute('data-description');
-        var image = button.getAttribute('src');
-        
-        var modalTitle = travelModal.querySelector('.modal-title');
-        var modalImage = travelModal.querySelector('.modal-image');
-        var modalDescription = travelModal.querySelector('#travelDescription');
-        
-        modalTitle.textContent = title;
-        modalImage.src = image;
-        modalDescription.textContent = description;
-      });
+//       var modalTitle = travelModal.querySelector('.modal-title');
+//       var modalImage = travelModal.querySelector('.modal-image');
+//       var modalDescription = travelModal.querySelector('#travelDescription');
       
-      // Initialize all images to be clickable
-      var travelImages = document.querySelectorAll('.travel-img-container img');
-      travelImages.forEach(function(img) {
-        img.style.cursor = 'pointer';
-      });
+//       modalTitle.textContent = title;
+//       modalImage.src = image;
+//       modalDescription.textContent = description;
+      
+//       console.log('Modal showing with:', {title, image, description});
+//     });
+    
+//     // Dodaj dodatkową interakcję po pełnym pokazaniu modala
+//     travelModal.addEventListener('shown.bs.modal', function() {
+//       console.log('Modal fully shown');
+//     });
+//   } else {
+//     console.error('Bootstrap not loaded');
+//   }
+  
+//   // Inicjalizowanie kursorów dla wszystkich obrazów
+//   var travelImages = document.querySelectorAll('.travel-img-container img');
+//   travelImages.forEach(function(img) {
+//     img.style.cursor = 'pointer';
+//     img.addEventListener('click', function() {
+//     console.log('Image clicked:', this.getAttribute('data-title'));
+//   });
+//   });
+
+const travelImages = document.querySelectorAll('.travel-img-container img');
+  const imgExpand = document.querySelector('.img-expand');
+  const expandImg = imgExpand.querySelector('img');
+  const closeButton = imgExpand.querySelector('.close-button');
+  const imageTitle = imgExpand.querySelector('.image-title');
+  const imageDescription = imgExpand.querySelector('.image-description');
+  
+  // Dodaj nasłuchiwacz zdarzeń do każdego zdjęcia
+  travelImages.forEach(function(img) {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function(e) {
+      e.preventDefault();
+      console.log('Image clicked:', img.alt);
+      
+      // Pobierz pozycję i wymiary oryginalnego obrazu
+      const rect = img.getBoundingClientRect();
+      
+      // Ustaw początkową pozycję i rozmiar powiększonego obrazu
+      expandImg.style.width = rect.width + 'px';
+      expandImg.style.height = rect.height + 'px';
+      expandImg.style.top = rect.top + 'px';
+      expandImg.style.left = rect.left + 'px';
+      
+      // Ustaw źródło obrazu
+      expandImg.src = img.src;
+      imageTitle.textContent = img.getAttribute('data-title');
+      imageDescription.textContent = img.getAttribute('data-description');
+      
+      // Pokaż kontener powiększenia
+      imgExpand.style.display = 'flex';
+      
+      // Po małym opóźnieniu, aby CSS mógł rozpoznać zmianę
+      setTimeout(function() {
+        imgExpand.classList.add('active');
+        
+        // Teraz przenieś obraz na środek i powiększ go
+        expandImg.style.width = '';
+        expandImg.style.height = '';
+        expandImg.style.top = '50%';
+        expandImg.style.left = '50%';
+        expandImg.style.transform = 'translate(-50%, -50%)';
+      }, 10);
+      
+      console.log('Animation started');
     });
+  });
+  
+  // Zamknij powiększenie po kliknięciu przycisku zamknięcia lub tła
+  closeButton.addEventListener('click', closeExpand);
+  imgExpand.addEventListener('click', function(e) {
+    if (e.target === imgExpand) {
+      closeExpand();
+    }
+  });
+  
+  // Funkcja zamykająca powiększenie
+  function closeExpand() {
+    imgExpand.classList.remove('active');
+    
+    // Po zakończeniu animacji, ukryj element
+    setTimeout(function() {
+      imgExpand.style.display = 'none';
+    }, 300); // Czas powinien być zbliżony do czasu trwania animacji w CSS
+    
+    console.log('Image closed');
+  }
+  
+  // Obsługa klawisza Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && imgExpand.classList.contains('active')) {
+      closeExpand();
+    }
+  });
+});
   </script>
 </body>
 </html>
