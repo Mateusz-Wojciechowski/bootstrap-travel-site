@@ -3,31 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Strona SPA - Podróże</title>
-  <!-- Bootstrap 5 CSS -->
+  <title>Odyseja Marzeń</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-  <!-- Custom styles -->
   <link rel="stylesheet" href="css/test.css">
 </head>
 <body>
-
-  <!--Main Navigation-->
   <header>
-    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark primary-color fixed-top">
       <div class="container">
-        <!-- Navbar brand -->
         <a class="navbar-brand" href="#">Podróże SPA</a>
-        <!-- Toggler -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Collapsible content -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#intro">Home</a>
@@ -39,7 +29,6 @@
               <a class="nav-link" href="#contact">Kontakt</a>
             </li>
           </ul>
-          <!-- Search form -->
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Szukaj" aria-label="Search">
             <button class="btn btn-outline-light" type="submit">Szukaj</button>
@@ -48,17 +37,13 @@
       </div>
     </nav>
 
-    <!--Intro Section-->
     <div id="intro" class="view">
       <div class="mask d-flex align-items-center justify-content-center">
         <div class="container">
           <div class="row justify-content-center text-center">
             <div class="col-md-10">
-              <!-- Heading -->
               <h2 class="display-4 fw-bold text-white pt-5 mb-2">Podróżowanie</h2>
-              <!-- Divider -->
               <hr class="hr-light mx-auto">
-              <!-- Description -->
               <h4 class="text-white my-4">Odkryj z nami najpiękniejsze miejsca na ziemi.</h4>
               <button type="button" class="btn btn-outline-light" href="#lastTravels">
                 Dowiedz się więcej <i class="bi bi-book ms-2"></i>
@@ -70,26 +55,20 @@
     </div>
   </header>
 
-  <!--Main layout-->
   <main class="mt-5">
     <div class="container">
 
-      <!-- Section: Last Travels -->
       <section id="lastTravels" class="text-center my-5">
         <h2 class="mb-4">Ostatnie wyprawy</h2>
-        <!--Grid row-->
         <div class="row">
-          <!--Grid column-->
           <div class="col-lg-4 col-md-12 mb-4">
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip1.jpg" class="img-fluid" alt="Podróż 1" data-bs-toggle="modal" data-bs-target="#travelModal" 
                    data-title="Tatry" data-description="Aktywny wypoczynek w polskich górach. Tatry to najwyższe pasmo górskie w Polsce, oferujące przepiękne widoki, liczne szlaki turystyczne o różnym stopniu trudności oraz bogactwo flory i fauny. W zimie można cieszyć się sportami zimowymi, a w lecie pieszymi wędrówkami. To idealne miejsce dla miłośników aktywnego wypoczynku i przyrody.">
-              <!-- <div class="travel-img-overlay"></div> -->
             </div>
             <h4 class="my-4 fw-bold">Tatry</h4>
             <p class="text-muted">Aktywny wypoczynek w polskich górach</p>
           </div>
-          <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip2.jpg" class="img-fluid" alt="Podróż 2" data-bs-toggle="modal" data-bs-target="#travelModal" 
@@ -98,7 +77,6 @@
             <h4 class="my-4 fw-bold">San Sebastian</h4>
             <p class="text-muted">Relaks w północnej Hiszpanii</p>
           </div>
-          <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip3.jpg" class="img-fluid" alt="Podróż 3" data-bs-toggle="modal" data-bs-target="#travelModal" 
@@ -108,10 +86,7 @@
             <p class="text-muted">Podziwianie malowniczych górskich widoków</p>
           </div>
         </div>
-        <!--Grid row-->
-        <!--Grid row-->
         <div class="row">
-          <!--Grid column-->
           <div class="col-lg-4 col-md-12 mb-4">
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip4.jpg" class="img-fluid" alt="Podróż 4" data-bs-toggle="modal" data-bs-target="#travelModal" 
@@ -120,7 +95,6 @@
             <h4 class="my-4 fw-bold">Wenecja</h4>
             <p class="text-muted">Zwiedzanie jedynego w swoim rodzaju miasta</p>
           </div>
-          <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip5.jpg" class="img-fluid" alt="Podróż 5" data-bs-toggle="modal" data-bs-target="#travelModal" 
@@ -129,7 +103,6 @@
             <h4 class="my-4 fw-bold">Ibiza</h4>
             <p class="text-muted">Zabawa na rajskiej hiszpańskiej wyspie</p>
           </div>
-          <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip6.jpg" class="img-fluid" alt="Podróż 6" data-bs-toggle="modal" data-bs-target="#travelModal" 
@@ -139,12 +112,10 @@
             <p class="text-muted">Odkrywanie legendarnego miasta</p>
           </div>
         </div>
-        <!--Grid row-->
       </section>
 
       <hr class="my-5">
 
-      <!-- Section: Text and Image (1:3 ratio) -->
       <section id="textImage" class="my-5">
         <div class="row align-items-center">
           <div class="col-md-3">
@@ -162,7 +133,6 @@
 
       <hr class="my-5">
 
-      <!-- Section: Quote -->
       <section id="quote" class="text-center my-5">
         <figure class="text-center">
           <blockquote class="blockquote">
@@ -268,7 +238,6 @@
 
       <hr class="my-5">
 
-      <!-- Section: FAQ -->
       <section id="faq" class="my-5">
         <h2 class="text-center mb-4">Najczęściej zadawane pytania</h2>
         <div class="accordion" id="faqAccordion">
@@ -316,7 +285,6 @@
 
       <hr class="my-5">
 
-      <!-- Section: Google Maps -->
       <section id="map" class="my-5">
         <h2 class="text-center mb-4">Znajdź nas</h2>
         <div class="row justify-content-center">
@@ -332,7 +300,6 @@
 
       <hr class="my-5">
 
-      <!-- Section: Contact Form -->
       <section id="contact" class="my-5">
         <h2 class="text-center mb-4">Skontaktuj się z nami</h2>
         <div class="row justify-content-center">
@@ -358,7 +325,6 @@
 
       <hr class="my-5">
 
-      <!-- Section: Chart with Popular Travel Destinations -->
       <section id="chart" class="my-5">
         <h2 class="text-center mb-4">Najpopularniejsze kierunki podróży</h2>
         <canvas id="travelChart"></canvas>
@@ -385,7 +351,6 @@
     </div>
   </div> -->
 
-  <!--Footer-->
   <footer class="text-center text-white mt-4 py-3 primary-color">
     <div class="container">
       <div class="row">
@@ -405,15 +370,10 @@
     </div>
   </div>
 
-  <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Custom scripts -->
   <script>
-    // Chart.js initialization
     document.addEventListener('DOMContentLoaded', function() {
-  // Chart.js initialization
   var ctx = document.getElementById('travelChart').getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'bar',
@@ -451,12 +411,9 @@
     }
   });
   
-  // Travel modal initialization - oddzielny blok kodu
 //   var travelModal = document.getElementById('travelModal');
   
-//   // Upewnij się, że Bootstrap jest załadowany
 //   if (typeof bootstrap !== 'undefined') {
-//     // Obsługa zdarzenia pokazywania modala
 //     travelModal.addEventListener('show.bs.modal', function(event) {
 //       var button = event.relatedTarget;
 //       var title = button.getAttribute('data-title');
@@ -474,7 +431,6 @@
 //       console.log('Modal showing with:', {title, image, description});
 //     });
     
-//     // Dodaj dodatkową interakcję po pełnym pokazaniu modala
 //     travelModal.addEventListener('shown.bs.modal', function() {
 //       console.log('Modal fully shown');
 //     });
@@ -482,7 +438,6 @@
 //     console.error('Bootstrap not loaded');
 //   }
   
-//   // Inicjalizowanie kursorów dla wszystkich obrazów
 //   var travelImages = document.querySelectorAll('.travel-img-container img');
 //   travelImages.forEach(function(img) {
 //     img.style.cursor = 'pointer';
@@ -498,13 +453,13 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
   const imageTitle = imgExpand.querySelector('.image-title');
   const imageDescription = imgExpand.querySelector('.image-description');
   
-  // Add Material Design ripple effect to images
+
   const travelContainers = document.querySelectorAll('.travel-img-container');
   travelContainers.forEach(container => {
     container.addEventListener('click', createRipple);
   });
   
-  // Create ripple effect
+  
   function createRipple(event) {
     const container = event.currentTarget;
     
@@ -524,41 +479,37 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
     
     container.appendChild(circle);
     
-    // Remove ripple after animation completes
+    
     setTimeout(() => {
       circle.remove();
     }, 600);
   }
 
-  // Add click event listener to each image
+  
   travelImages.forEach(function(img) {
     img.addEventListener('click', function(e) {
       e.preventDefault();
-      e.stopPropagation(); // Prevent container click from triggering twice
+      e.stopPropagation();
       
-      // Get position and dimensions of original image
+      
       const rect = img.getBoundingClientRect();
       
-      // Set initial position and size of expanded image (starting from thumbnail position)
+     
       expandImg.style.width = rect.width + 'px';
       expandImg.style.height = rect.height + 'px';
       expandImg.style.top = rect.top + 'px';
       expandImg.style.left = rect.left + 'px';
       expandImg.style.transform = 'none';
       
-      // Set image source and caption
       expandImg.src = img.src;
       imageTitle.textContent = img.getAttribute('data-title');
       imageDescription.textContent = img.getAttribute('data-description');
       
-      // Show expansion container
       imgExpand.style.display = 'flex';
       
-      // Small delay to allow browser to register the initial state
       requestAnimationFrame(() => {
         imgExpand.classList.add('active');
         
-        // Now move image to center and expand it (using CSS transitions)
         expandImg.style.width = '';
         expandImg.style.height = '';
         expandImg.style.top = '50%';
@@ -568,7 +519,6 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
     });
   });
   
-  // Close expanded image when clicking close button or background
   closeButton.addEventListener('click', closeExpand);
   imgExpand.addEventListener('click', function(e) {
     if (e.target === imgExpand) {
@@ -576,17 +526,14 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
     }
   });
   
-  // Function to close expanded image with animation
   function closeExpand() {
     imgExpand.classList.remove('active');
     
-    // Hide element after animation completes
     setTimeout(function() {
       imgExpand.style.display = 'none';
-    }, 400); // Match transition time from CSS
+    }, 400);
   }
   
-  // Close expanded image with Escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && imgExpand.classList.contains('active')) {
       closeExpand();
@@ -619,11 +566,9 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
   //       return card;
   //   }
 
-  //   // Tworzymy kopie pierwszych i ostatnich elementów dla efektu pętli
   //   let clonedStart = employeeData.slice(-3);
   //   let clonedEnd = employeeData.slice(0, 3);
 
-  //   // Dodajemy klony + oryginalne elementy do tracka
   //   [...clonedStart, ...employeeData, ...clonedEnd].forEach(emp => {
   //       track.appendChild(createCard(emp));
   //   });
@@ -633,7 +578,7 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
   //   let totalCards = track.children.length;
   //   console.log(totalCards)
   //   // let totalCards = 18
-  //   // let index = employeeData.length; // Startujemy od pierwszej prawdziwej karty
+  //   // let index = employeeData.length;
   //   let startIndex = -2;
 
   //   track.style.transition = "none";
@@ -647,16 +592,15 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
   //       track.style.transition = "transform 0.5s ease-in-out";
   //       track.style.transform = `translateX(-${(index + startIndex) * cardWidth +25}px)`;
 
-  //       // Po animacji sprawdzamy, czy jesteśmy na klonie i resetujemy
   //       setTimeout(() => {
   //           if (index >= totalCards - 3) {
   //               track.style.transition = "none";
-  //               index = 3; // Resetujemy do pierwszego prawdziwego elementu
+  //               index = 3;
   //               track.style.transform = `translateX(+${index * (cardWidth+10)}px)`;
   //           }
   //           if (index <= 0) {
   //               track.style.transition = "none";
-  //               index = totalCards - 6; // Resetujemy do ostatniego prawdziwego elementu
+  //               index = totalCards - 6;
   //               track.style.transform = `translateX(-${index * (cardWidth +10) }px)`;
   //           }
   //       }, 500);
