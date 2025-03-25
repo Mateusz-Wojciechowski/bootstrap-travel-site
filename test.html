@@ -60,7 +60,7 @@
               <hr class="hr-light mx-auto">
               <!-- Description -->
               <h4 class="text-white my-4">Odkryj z nami najpiękniejsze miejsca na ziemi.</h4>
-              <button type="button" class="btn btn-outline-light">
+              <button type="button" class="btn btn-outline-light" href="#lastTravels">
                 Dowiedz się więcej <i class="bi bi-book ms-2"></i>
               </button>
             </div>
@@ -94,7 +94,6 @@
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip2.jpg" class="img-fluid" alt="Podróż 2" data-bs-toggle="modal" data-bs-target="#travelModal" 
                    data-title="San Sebastian" data-description="Relaks w północnej Hiszpanii. San Sebastian to perła wybrzeża w Kraju Basków, słynąca z pięknych plaż, wyśmienitej kuchni i urokliwej starówki. Miasto jest znane z najwyższej koncentracji restauracji z gwiazdkami Michelin w Europie. Można tu cieszyć się plażowaniem, surfingiem oraz odkrywaniem baskijskiej kultury i tradycji kulinarnych.">
-              <div class="travel-img-overlay"></div>
             </div>
             <h4 class="my-4 fw-bold">San Sebastian</h4>
             <p class="text-muted">Relaks w północnej Hiszpanii</p>
@@ -104,7 +103,6 @@
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip3.jpg" class="img-fluid" alt="Podróż 3" data-bs-toggle="modal" data-bs-target="#travelModal" 
                    data-title="Francuskie Alpy" data-description="Podziwianie malowniczych górskich widoków. Francuskie Alpy to majestatyczne góry oferujące niezapomniane wrażenia w każdej porze roku. Zimą to raj dla narciarzy i snowboardzistów, z licznymi stacjami narciarskimi. Latem to idealne miejsce na piesze wycieczki, jazdę na rowerze górskim czy wspinaczkę. Oprócz aktywności sportowych, region słynie także z pysznej kuchni alpejskiej i urokliwych, tradycyjnych wiosek.">
-              <div class="travel-img-overlay"></div>
             </div>
             <h4 class="my-4 fw-bold">Francuskie Alpy</h4>
             <p class="text-muted">Podziwianie malowniczych górskich widoków</p>
@@ -118,7 +116,6 @@
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip4.jpg" class="img-fluid" alt="Podróż 4" data-bs-toggle="modal" data-bs-target="#travelModal" 
                    data-title="Wenecja" data-description="Zwiedzanie jedynego w swoim rodzaju miasta. Wenecja to unikalne miasto zbudowane na wodzie, z siecią kanałów zamiast ulic. Słynie z placu św. Marka, Bazyliki św. Marka, Pałacu Dożów i Mostu Rialto. Miasto oferuje bogactwo sztuki, architektury oraz niezwykłą atmosferę. Przejażdżka gondolą po Canale Grande to niezapomniane przeżycie dla każdego podróżnika.">
-              <div class="travel-img-overlay"></div>
             </div>
             <h4 class="my-4 fw-bold">Wenecja</h4>
             <p class="text-muted">Zwiedzanie jedynego w swoim rodzaju miasta</p>
@@ -128,7 +125,6 @@
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip5.jpg" class="img-fluid" alt="Podróż 5" data-bs-toggle="modal" data-bs-target="#travelModal" 
                    data-title="Ibiza" data-description="Zabawa na rajskiej hiszpańskiej wyspie. Ibiza jest znana jako światowa stolica klubów i muzyki elektronicznej, ale wyspa oferuje znacznie więcej. Można tu znaleźć malownicze zatoki z krystalicznie czystą wodą, urokliwe wioski, zabytki UNESCO oraz przepiękne zachody słońca. To idealne miejsce zarówno dla miłośników imprezowania, jak i dla osób szukających relaksu na pięknych plażach.">
-              <div class="travel-img-overlay"></div>
             </div>
             <h4 class="my-4 fw-bold">Ibiza</h4>
             <p class="text-muted">Zabawa na rajskiej hiszpańskiej wyspie</p>
@@ -138,7 +134,6 @@
             <div class="travel-img-container shadow-sm rounded">
               <img src="img/trip6.jpg" class="img-fluid" alt="Podróż 6" data-bs-toggle="modal" data-bs-target="#travelModal" 
                    data-title="Ateny" data-description="Odkrywanie legendarnego miasta. Ateny, kolebka zachodniej cywilizacji, oferują niezwykłą podróż przez historię. Akropol z Partenonem, Agora, świątynia Zeusa Olimpijskiego - to tylko niektóre z zabytków tego fascynującego miasta. Oprócz bogactwa historycznego, Ateny tętnią życiem, oferując nowoczesne atrakcje, znakomitą kuchnię i dostęp do pięknych plaż w okolicy.">
-              <div class="travel-img-overlay"></div>
             </div>
             <h4 class="my-4 fw-bold">Ateny</h4>
             <p class="text-muted">Odkrywanie legendarnego miasta</p>
@@ -181,84 +176,97 @@
 
       <hr class="my-5">
 
-      <!-- Section: Carousel with Cards (Employees) -->
-      <section id="employees" class="my-5">
+      <!-- <section id="employees" class="my-5">
         <h2 class="text-center mb-4">Nasz Zespół</h2>
-        <div id="employeeCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="card mb-4">
-                    <img class="card-img-top" src="img/employee1.jpg" alt="Jan Kowalski">
-                    <div class="card-body">
-                      <h5 class="card-title">Jan Kowalski</h5>
-                      <p class="card-text">Specjalista ds. podróży.</p>
-                    </div>
-                  </div>
+        <div class="carousel-container">
+            <button class="carousel-control prev" id="prevBtn">&#10094;</button>
+            <div class="carousel">
+                <div class="carousel-track">
+
                 </div>
-                <div class="col-md-4">
-                  <div class="card mb-4">
-                    <img class="card-img-top" src="img/employee2.jpg" alt="Anna Nowak">
-                    <div class="card-body">
-                      <h5 class="card-title">Anna Nowak</h5>
-                      <p class="card-text">Kierownik ds. logistyki.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card mb-4">
-                    <img class="card-img-top" src="img/employee3.jpg" alt="Piotr Wiśniewski">
-                    <div class="card-body">
-                      <h5 class="card-title">Piotr Wiśniewski</h5>
-                      <p class="card-text">Ekspert ds. relacji międzyludzkich.</p>
-                    </div>
+            </div>
+            <button class="carousel-control next" id="nextBtn">&#10095;</button>
+        </div>
+    </section> -->
+    <section id="employees" class="my-5">
+      <h2 class="text-center mb-4">Nasz Zespół</h2>
+      <div id="employeeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="img/employee1.jpg" alt="Jan Kowalski">
+                  <div class="card-body">
+                    <h5 class="card-title">Jan Kowalski</h5>
+                    <p class="card-text">Specjalista ds. podróży.</p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="card mb-4">
-                    <img class="card-img-top" src="img/employee4.jpg" alt="Katarzyna Zielińska">
-                    <div class="card-body">
-                      <h5 class="card-title">Katarzyna Zielińska</h5>
-                      <p class="card-text">Specjalistka ds. marketingu.</p>
-                    </div>
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="img/employee2.jpg" alt="Anna Nowak">
+                  <div class="card-body">
+                    <h5 class="card-title">Anna Nowak</h5>
+                    <p class="card-text">Kierownik ds. logistyki.</p>
                   </div>
                 </div>
-                <div class="col-md-4">
-                  <div class="card mb-4">
-                    <img class="card-img-top" src="img/employee5.jpg" alt="Michał Lewandowski">
-                    <div class="card-body">
-                      <h5 class="card-title">Michał Lewandowski</h5>
-                      <p class="card-text">Konsultant ds. turystyki.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card mb-4">
-                    <img class="card-img-top" src="img/employee6.jpg" alt="Ewa Kamińska">
-                    <div class="card-body">
-                      <h5 class="card-title">Ewa Kamińska</h5>
-                      <p class="card-text">Specjalistka ds. obsługi klienta.</p>
-                    </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="img/employee3.jpg" alt="Piotr Wiśniewski">
+                  <div class="card-body">
+                    <h5 class="card-title">Piotr Wiśniewski</h5>
+                    <p class="card-text">Ekspert ds. relacji międzyludzkich.</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#employeeCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#employeeCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="img/employee4.jpg" alt="Katarzyna Zielińska">
+                  <div class="card-body">
+                    <h5 class="card-title">Katarzyna Zielińska</h5>
+                    <p class="card-text">Specjalistka ds. marketingu.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="img/employee5.jpg" alt="Michał Lewandowski">
+                  <div class="card-body">
+                    <h5 class="card-title">Michał Lewandowski</h5>
+                    <p class="card-text">Konsultant ds. turystyki.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4">
+                  <img class="card-img-top" src="img/employee6.jpg" alt="Ewa Kamińska">
+                  <div class="card-body">
+                    <h5 class="card-title">Ewa Kamińska</h5>
+                    <p class="card-text">Specjalistka ds. obsługi klienta.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+        <button class="carousel-control prev" type="button" data-bs-target="#employeeCarousel" data-bs-slide="prev">
+          &#10094
+          <!-- <span class="carousel-control-prev-icon" aria-hidden="false"></span> -->
+          <!--<span class="visually-hidden">Previous</span> -->
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#employeeCarousel" data-bs-slide="next">
+          &#10095
+          <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span> -->
+        </button>
+      </div>
+    </section>
 
       <hr class="my-5">
 
@@ -492,47 +500,77 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
   const imageTitle = imgExpand.querySelector('.image-title');
   const imageDescription = imgExpand.querySelector('.image-description');
   
-  // Dodaj nasłuchiwacz zdarzeń do każdego zdjęcia
+  // Add Material Design ripple effect to images
+  const travelContainers = document.querySelectorAll('.travel-img-container');
+  travelContainers.forEach(container => {
+    container.addEventListener('click', createRipple);
+  });
+  
+  // Create ripple effect
+  function createRipple(event) {
+    const container = event.currentTarget;
+    
+    const circle = document.createElement('div');
+    const diameter = Math.max(container.clientWidth, container.clientHeight);
+    const radius = diameter / 2;
+    
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${event.clientX - container.getBoundingClientRect().left - radius}px`;
+    circle.style.top = `${event.clientY - container.getBoundingClientRect().top - radius}px`;
+    circle.classList.add('ripple');
+    
+    const ripple = container.querySelector('.ripple');
+    if (ripple) {
+      ripple.remove();
+    }
+    
+    container.appendChild(circle);
+    
+    // Remove ripple after animation completes
+    setTimeout(() => {
+      circle.remove();
+    }, 600);
+  }
+
+  // Add click event listener to each image
   travelImages.forEach(function(img) {
-    img.style.cursor = 'pointer';
     img.addEventListener('click', function(e) {
       e.preventDefault();
-      console.log('Image clicked:', img.alt);
+      e.stopPropagation(); // Prevent container click from triggering twice
       
-      // Pobierz pozycję i wymiary oryginalnego obrazu
+      // Get position and dimensions of original image
       const rect = img.getBoundingClientRect();
       
-      // Ustaw początkową pozycję i rozmiar powiększonego obrazu
+      // Set initial position and size of expanded image (starting from thumbnail position)
       expandImg.style.width = rect.width + 'px';
       expandImg.style.height = rect.height + 'px';
       expandImg.style.top = rect.top + 'px';
       expandImg.style.left = rect.left + 'px';
+      expandImg.style.transform = 'none';
       
-      // Ustaw źródło obrazu
+      // Set image source and caption
       expandImg.src = img.src;
       imageTitle.textContent = img.getAttribute('data-title');
       imageDescription.textContent = img.getAttribute('data-description');
       
-      // Pokaż kontener powiększenia
+      // Show expansion container
       imgExpand.style.display = 'flex';
       
-      // Po małym opóźnieniu, aby CSS mógł rozpoznać zmianę
-      setTimeout(function() {
+      // Small delay to allow browser to register the initial state
+      requestAnimationFrame(() => {
         imgExpand.classList.add('active');
         
-        // Teraz przenieś obraz na środek i powiększ go
+        // Now move image to center and expand it (using CSS transitions)
         expandImg.style.width = '';
         expandImg.style.height = '';
         expandImg.style.top = '50%';
         expandImg.style.left = '50%';
         expandImg.style.transform = 'translate(-50%, -50%)';
-      }, 10);
-      
-      console.log('Animation started');
+      });
     });
   });
   
-  // Zamknij powiększenie po kliknięciu przycisku zamknięcia lub tła
+  // Close expanded image when clicking close button or background
   closeButton.addEventListener('click', closeExpand);
   imgExpand.addEventListener('click', function(e) {
     if (e.target === imgExpand) {
@@ -540,24 +578,101 @@ const travelImages = document.querySelectorAll('.travel-img-container img');
     }
   });
   
-  // Funkcja zamykająca powiększenie
+  // Function to close expanded image with animation
   function closeExpand() {
     imgExpand.classList.remove('active');
     
-    // Po zakończeniu animacji, ukryj element
+    // Hide element after animation completes
     setTimeout(function() {
       imgExpand.style.display = 'none';
-    }, 300); // Czas powinien być zbliżony do czasu trwania animacji w CSS
-    
-    console.log('Image closed');
+    }, 400); // Match transition time from CSS
   }
   
-  // Obsługa klawisza Escape
+  // Close expanded image with Escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && imgExpand.classList.contains('active')) {
       closeExpand();
     }
   });
+
+  // const employeeData = [
+  //       { img: "img/employee1.jpg", name: "Jan Kowalski", position: "Specjalista ds. podróży" },
+  //       { img: "img/employee2.jpg", name: "Anna Nowak", position: "Kierownik ds. logistyki" },
+  //       { img: "img/employee3.jpg", name: "Piotr Wiśniewski", position: "Ekspert ds. relacji międzyludzkich" },
+  //       { img: "img/employee4.jpg", name: "Katarzyna Zielińska", position: "Specjalistka ds. marketingu" },
+  //       { img: "img/employee5.jpg", name: "Michał Lewandowski", position: "Konsultant ds. turystyki" },
+  //       { img: "img/employee6.jpg", name: "Ewa Kamińska", position: "Specjalistka ds. obsługi klienta" }
+  //   ];
+
+  //   const track = document.querySelector(".carousel-track");
+  //   const prevBtn = document.getElementById("prevBtn");
+  //   const nextBtn = document.getElementById("nextBtn");
+
+  //   function createCard(employee) {
+  //       const card = document.createElement("div");
+  //       card.classList.add("card");
+  //       card.innerHTML = `
+  //           <img class="card-img-top" src="${employee.img}" alt="${employee.name}">
+  //           <div class="card-body">
+  //               <h5 class="card-title">${employee.name}</h5>
+  //               <p class="card-text">${employee.position}</p>
+  //           </div>
+  //       `;
+  //       return card;
+  //   }
+
+  //   // Tworzymy kopie pierwszych i ostatnich elementów dla efektu pętli
+  //   let clonedStart = employeeData.slice(-3);
+  //   let clonedEnd = employeeData.slice(0, 3);
+
+  //   // Dodajemy klony + oryginalne elementy do tracka
+  //   [...clonedStart, ...employeeData, ...clonedEnd].forEach(emp => {
+  //       track.appendChild(createCard(emp));
+  //   });
+
+  //   // let cardWidth = document.querySelector(".card").offsetWidth;
+  //   let cardWidth = 300;
+  //   let totalCards = track.children.length;
+  //   console.log(totalCards)
+  //   // let totalCards = 18
+  //   // let index = employeeData.length; // Startujemy od pierwszej prawdziwej karty
+  //   let startIndex = -2;
+
+  //   track.style.transition = "none";
+  //   track.style.transform = `translateX(-${startIndex * cardWidth +5}px)`;
+  //   track.style.transition = "transform 0.5s ease-in-out";
+
+  //   index = 0;
+
+  //   function updateCarousel() {
+  //       console.log(index);
+  //       track.style.transition = "transform 0.5s ease-in-out";
+  //       track.style.transform = `translateX(-${(index + startIndex) * cardWidth +25}px)`;
+
+  //       // Po animacji sprawdzamy, czy jesteśmy na klonie i resetujemy
+  //       setTimeout(() => {
+  //           if (index >= totalCards - 3) {
+  //               track.style.transition = "none";
+  //               index = 3; // Resetujemy do pierwszego prawdziwego elementu
+  //               track.style.transform = `translateX(+${index * (cardWidth+10)}px)`;
+  //           }
+  //           if (index <= 0) {
+  //               track.style.transition = "none";
+  //               index = totalCards - 6; // Resetujemy do ostatniego prawdziwego elementu
+  //               track.style.transform = `translateX(-${index * (cardWidth +10) }px)`;
+  //           }
+  //       }, 500);
+  //   }
+
+  //   nextBtn.addEventListener("click", function() {
+  //       index++;
+  //       updateCarousel();
+  //   });
+
+  //   prevBtn.addEventListener("click", function() {
+  //       index--;
+  //       updateCarousel();
+  //   });
 });
   </script>
 </body>

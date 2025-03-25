@@ -36,22 +36,4 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
   });
-  
-document.addEventListener("DOMContentLoaded", function () {
-  // Pobierz wszystkie obrazy z sekcji podróży
-  document.querySelectorAll(".view.overlay img").forEach(function (img) {
-    img.addEventListener("click", function () {
-      // Pobierz nazwę pliku obrazka, np. "trip1.jpg"
-      let imgSrc = img.getAttribute("src");
-      
-      // Znajdź, który modal ma ten sam obraz
-      if (imgSrc.includes("trip1.jpg")) {
-        $("#modalTrip1").modal("show");
-      } else if (imgSrc.includes("trip2.jpg")) {
-        $("#modalTrip2").modal("show");
-      } else if (imgSrc.includes("trip3.jpg")) {
-        $("#modalTrip3").modal("show");
-      }
-    });
-  });
-});
+

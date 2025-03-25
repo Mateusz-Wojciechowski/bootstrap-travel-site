@@ -134,23 +134,27 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Material Design transition */
     opacity: 0;
     visibility: hidden;
 }
 
 .img-expand.active {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.92);
     opacity: 1;
     visibility: visible;
 }
 
 .img-expand img {
     position: absolute;
-    max-height: 90vh;
-    max-width: 90vw;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-height: 100vh;
+    max-width: 100vw;
+    transform-origin: center;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Material Design transition */
     object-fit: contain;
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 
+                0 3px 14px 2px rgba(0,0,0,0.12), 
+                0 5px 5px -3px rgba(0,0,0,0.2); /* Material Design shadow */
 }
 
 .img-expand .close-button {
@@ -162,36 +166,48 @@ hr {
     cursor: pointer;
     z-index: 10000;
     background: rgba(0,0,0,0.5);
-    width: 40px;
-    height: 40px;
+    width: 56px; /* Material Design size */
+    height: 56px; /* Material Design size */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Material Design transition */
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,0.2), 
+                0 6px 10px 0 rgba(0,0,0,0.14), 
+                0 1px 18px 0 rgba(0,0,0,0.12); /* Material Design shadow */
 }
 
 .img-expand.active .close-button {
     opacity: 1;
+    transform: scale(1);
+}
+
+.img-expand .close-button:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
 }
 
 .img-expand .image-caption {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 0;
     right: 0;
     color: white;
     text-align: center;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    max-width: 80%;
+    padding: 16px 24px; /* Material Design padding */
+    background-color: rgba(33, 33, 33, 0.7);
+    max-width: 90%;
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: 4px;
     opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
+    transform: translateY(30px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s; /* Material Design transition with delay */
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 
+                0 3px 14px 2px rgba(0,0,0,0.12), 
+                0 5px 5px -3px rgba(0,0,0,0.2); /* Material Design shadow */
 }
 
 .img-expand.active .image-caption {
@@ -201,36 +217,113 @@ hr {
 
 .img-expand .image-title {
     font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight: 500; /* Material Design typography */
+    margin-bottom: 8px;
+    letter-spacing: 0.0125em; /* Material Design typography */
 }
 
 .img-expand .image-description {
     font-size: 1rem;
+    font-weight: 400; /* Material Design typography */
+    line-height: 1.5; /* Material Design typography */
+    letter-spacing: 0.03125em; /* Material Design typography */
+}
+
+/* Material Design Ripple Effect for images */
+.travel-img-container {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 
+                0 1px 1px 0 rgba(0,0,0,0.14), 
+                0 1px 3px 0 rgba(0,0,0,0.12);
+}
+
+.travel-img-container:hover {
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2), 
+                0 8px 10px 1px rgba(0,0,0,0.14), 
+                0 3px 14px 2px rgba(0,0,0,0.12);
+}
+
+.travel-img-container .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
 .travel-img-container img {
-    transition: transform 0.8s ease; /* zwiększono z 0.3s na 0.8s */
-  }
-  
-  /* Zwiększ czas trwania animacji dla powiększonego obrazu */
-.img-expand img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    width: 100%;
+}
+
+.travel-img-container:hover img {
+    transform: scale(1.05);
+}
+
+/* .carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+} */
+/*
+
+.carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    width: 300px;
+    flex-shrink: 0;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+*/
+ .carousel-control {
     position: absolute;
-    max-height: 100vh; /* zmieniono z 90vh na 100vh */
-    max-width: 100vw; /* zmieniono z 90vw na 100vw */
-    transition: all 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* zwiększono z 0.5s na 1.2s */
-    object-fit: contain;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+/*
+
+.prev {
+    left: 10px;
 }
 
-/* Dla lepszego efektu pełnoekranowego - usuń marginesy */
-.img-expand.active {
-    background-color: rgba(0, 0, 0, 0.95); /* lekko zwiększona nieprzezroczystość tła */
-    opacity: 1;
-    visibility: visible;
-}
+.next {
+    right: 10px;
+} */
 
-/* Dodaj płynniejszy efekt dla opisu zdjęcia */
-.img-expand .image-caption {
-    transition: all 0.8s ease 0.3s; /* dodano opóźnienie 0.3s */
-    max-width: 90%; /* zwiększono z 80% na 90% */
-}
+/* .carousel-inner {
+
+    justify-content: center;
+} */
